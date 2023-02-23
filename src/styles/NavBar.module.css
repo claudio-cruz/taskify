@@ -1,0 +1,12 @@
+.NavBar {
+  background-color: #ffffff;
+  border: 1px solid #101013;
+}
+
+.Active i {
+  font-size: large;
+}
+
+a:hover {
+  font-size: large;
+}

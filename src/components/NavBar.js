@@ -1,11 +1,12 @@
 import React from 'react';
-import { Navbar, Container, Nav, NavDropdown, } from 'react-bootstrap';
-import logo from "../assets/logo.png"
+import { Navbar, Container, Nav, NavLink } from 'react-bootstrap';
+import logo from "../assets/logo.png";
+import styles from "../styles/NavBar.module.css";
 
 const NavBar = () => {
     return (
-        <Navbar bg="light" expand="md" fixed="top">
-            <Container>
+        <Navbar className={styles.NavBar} expand="md" fixed="top">
+            <Container fluid>
 
                 <Navbar.Brand href="#home" className="d-flex align-items-center">
                     <img src={logo} height="45" alt="Taskify logo" />
@@ -19,24 +20,22 @@ const NavBar = () => {
 
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ml-auto">
-                        <NavDropdown title="Menu" id="basic-nav-dropdown">
-                            <NavDropdown.Item href="#home">
-                                <i class="fa-solid fa-house"></i> Home
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#tasks">
-                                <i class="fa-solid fa-square-check"></i> Tasks
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#events">
-                                <i class="fa-solid fa-calendar-days"></i> Events
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#habits">
-                                <i class="fa-solid fa-repeat"></i> Habits
-                            </NavDropdown.Item>
-                            <NavDropdown.Item href="#notes">
-                                <i class="fa-solid fa-clipboard"></i> Notes
-                            </NavDropdown.Item>
-                        </NavDropdown>
+                    <Nav className="mr-auto text-right">
+                        <NavLink href="#home">
+                            <i class="fa-solid fa-house"></i> Home
+                        </NavLink>
+                        <NavLink href="#Tasks">
+                            <i class="fa-solid fa-square-check"></i> Tasks
+                        </NavLink>
+                        <NavLink href="#Events">
+                            <i class="fa-solid fa-calendar-days"></i> Events
+                        </NavLink>
+                        <NavLink href="#Habits">
+                            <i class="fa-solid fa-repeat"></i> Habits
+                        </NavLink>
+                        <NavLink href="#Notes">
+                            <i class="fa-solid fa-clipboard"></i> Notes
+                        </NavLink>
                     </Nav>
                 </Navbar.Collapse>
 
