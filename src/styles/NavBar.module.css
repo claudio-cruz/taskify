@@ -1,12 +1,21 @@
 .NavBar {
   background-color: #ffffff;
-  border: 1px solid #101013;
+  border: 1px solid black;
 }
 
-.Active i {
-  font-size: large;
+.Active {
+  background-color: #dddcdc;
+  font-weight: bolder;
+  border-radius: 7%;
+  color: black;
 }
 
 a:hover {
-  font-size: large;
+  font-weight: 600;
+  color: black;
+}
+
+.NavLink {
+  padding: 10px;
+  color: black;
 }
