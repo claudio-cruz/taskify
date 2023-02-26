@@ -1,12 +1,14 @@
-import NavBar from './components/NavBar'; 
+import NavBar from './components/NavBar';
+import SignUpForm from './pages/auth/SignUpForm';
+import SignInForm from './pages/auth/SignInForm';
 import styles from './App.module.css';
 import Container from 'react-bootstrap/Container';
 import { Route, Switch } from 'react-router-dom';
 import './api/axiosDefaults';
-import SignUpForm from './pages/auth/SignUpForm';
 
 
 function App() {
+
   return (
     <div className={styles.App}>
       <NavBar />
@@ -17,7 +19,8 @@ function App() {
           <Route exact path="/events" render={() => <h1>Events</h1>} />
           <Route exact path="/habits" render={() => <h1>Habits</h1>} />
           <Route exact path="/notes" render={() => <h1>Notes</h1>} />
-          <Route exact path="/signup" render={() =><SignUpForm />} />
+          <Route exact path="/signup" render={() => <SignUpForm />} />
+          <Route exact path="/signin" render={() => <SignInForm />} />
         </Switch>
       </Container>
     </div>
