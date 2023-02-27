@@ -7,7 +7,7 @@ export const SetCurrentUserContext = createContext();
 export const useCurrentUser = () => useContext(CurrentUserContext)
 export const useSetCurrentUser = () => useContext(SetCurrentUserContext)
 
-export const CurrentUserPovider = ({ children }) => {
+export const CurrentUserProvider = ({ children }) => {
     
   const [currentUser, setCurrentUser] = useState(null);
 

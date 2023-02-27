@@ -4,14 +4,14 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { CurrentUserPovider } from './contexts/CurrentUserContext';
+import { CurrentUserProvider } from "./contexts/CurrentUserContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <Router>
-      <CurrentUserPovider>
+      <CurrentUserProvider>
         <App />
-      </CurrentUserPovider>
+      </CurrentUserProvider>
     </Router>
   </React.StrictMode>,
   document.getElementById("root")
